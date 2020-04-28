@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'posts/flexbox.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Posts:</h2>
+    {% if posts_list  %}
+    <ul>
+        {% for post in posts_list %}
+            <li><a href="{% url 'posts:users' post.id %}">{{post.text}}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No posts available</p>
+
+    {% endif %}
+    <div class="flex-container">
+        <div class="flex-box">
+            <img src="https://ae01.alicdn.com/kf/HTB1Qk31Kb5YBuNjSspoq6zeNFXad/Custom-Canvas-Wall-Decor-Naruto-Poster-Naruto-Uchiha-Sasuke-Wallpaper-Hatake-Kakashi-Sticker-Mural-Kids-Room.jpg" >
+            <p>Naruto</p>
+        </div>
+        <div class="flex-box">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Bleachanime.png/220px-Bleachanime.png" >
+            <p>Bleach</p>
+        </div>
+        <div class="flex-box">
+            <img src="https://m.media-amazon.com/images/M/MV5BODNmZWRlN2ItMmRmYy00MWM1LTllMGQtMWY4NzgwNTU2MmY5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" >
+            <p>One Piece</p>
+        </div>
+        <div class="flex-box">
+            <img src="https://puzl-production.s3.amazonaws.com/files/uploads/files/001/630/861/original/key_art_fullmetal_alchemist_brotherhood1.jpg?1511581216" >            
+            <p>Fullmetal Alchemist Brotherhood</p>
+        </div>
+        
+    </div>
+    <!-- <form action="your_name/" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="submit">
+    </form> -->
+</body>
+</html>

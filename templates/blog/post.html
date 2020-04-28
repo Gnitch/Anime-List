@@ -1,0 +1,47 @@
+{% extends 'blog/header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block cssfile %}
+    <link rel="stylesheet" href="{% static 'blog/Posts.css' %}">
+    {% endblock %}
+    <title>Blog Post</title>
+</head>
+<body>
+    {% block content %}
+    <div id="postdiv_parent">
+
+        <div class="postdiv_child">
+
+            <a href="https://www.animefillerlist.com/" target="_blank"><h2 id="heading">{{blog_object.title}}</h2></a>
+        
+            <div class="post_icon">
+                <a href="{{linksObj.animeKaizoku}}" target="_blank"> <img src="https://img.icons8.com/color/48/000000/google-drive.png"/> </a>
+                <a href="{{linksObj.anidl}}" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="48" height="48"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none" stroke="none" stroke-width="1"></path><g id="original-icon" fill="#e74c3c" stroke="none" stroke-width="1"><path d="M86,6.88c-43.69832,0 -79.12,35.42168 -79.12,79.12c0,43.69832 35.42168,79.12 79.12,79.12c43.69832,0 79.12,-35.42168 79.12,-79.12c0,-43.69832 -35.42168,-79.12 -79.12,-79.12zM116.50936,116.96h-7.21024v-47.28624h-0.516l-19.52544,46.85968h-6.52224l-19.52544,-46.85968h-0.516v47.28624h-7.21024v-61.92h8.96808l21.20416,51.23536h0.688l21.19728,-51.23536h8.96808z"></path></g><g fill="#ffffff" stroke="none" stroke-width="1"><path d="M47.845,49.74h19.53l18.63,52.6l18.52,-52.6h19.63v72.52h-15v-19.82l1.5,-34.22l-19.57,54.04h-10.26l-19.53,-53.99l1.5,34.17v19.82h-14.95z"></path></g><path d="M37.845,132.26v-92.52h96.31v92.52z" fill="#ff0000" stroke="#50e3c2" stroke-width="3" opacity="0"></path></g></svg> </a>
+
+                <a href="https://horriblesubs.info/shows/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/utorrent.png"/> </a>
+            </div>
+            <p class="genre"> {{blog_object.genre}} </p>
+            <p class="genre">Episodes:{{AnimeInfoObj.episode_list}} </p>
+            <p id="content"> {{blog_object.body}} </p>
+
+            <p class="genre">OP:</p>
+            <p id="content"> {{AnimeInfoObj.op_list}} </p>
+            <p class="genre">ED:</p>
+            <p id="content"> {{AnimeInfoObj.ed_list}} </p>
+            
+            <a href="{% url 'blog:completed'  blog_object.id %}"> <button class="button btn btn-danger" type="button" >Completed</button> </a>
+            <a href="{% url 'blog:watching_btn'  blog_object.id %}"> <button class="button btn btn-danger" type="button" >Watching</button> </a>  
+            <a href="https://icons8.com/icon/13666/utorrent"></a>
+        </div>
+ 
+    </div>
+    {% endblock content %}
+</body>
+</html>

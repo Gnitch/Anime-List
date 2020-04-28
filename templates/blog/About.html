@@ -1,0 +1,23 @@
+{% extends 'blog/header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block cssfile %}
+        <link rel="stylesheet" href="{% static 'blog/about.css' %}">
+    {% endblock cssfile %}    
+    <title>About</title>
+</head>
+<body>
+    {% block content %}
+        <h1 class="about">Developer Info:</h1>
+        <div class="about">
+            <img src="{% static 'blog/logo.jpg' %}"  class="logo">
+            <p class="blog_title">Gnitch</p>
+            <a href="https://github.com/Gnitch" target="_blank"> <button type="button" class="btn btn-danger">Github</button> </a>
+        </div>
+    {% endblock content %}
+</body>
+</html>

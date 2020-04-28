@@ -1,0 +1,15 @@
+.btn-danger {
+    margin: 10px;
+    width: 260px;
+}
+
+.about {
+    width: 262px;
+    margin: auto;
+}
+img {
+    margin: auto;
+    width: 260px;
+    height: 290px;
+    border-radius: 50%
+}

@@ -1,0 +1,33 @@
+.flex-box {
+    width: 400px;
+    padding: 10px;
+    border: 4px solid gray;
+    margin: 10px;
+    height: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 5px;
+    margin: 0%;
+    height: auto;
+    text-align: center;
+    font-size: 35px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 280px;
+    /* object-fit: contain; */
+}
+
+
+
