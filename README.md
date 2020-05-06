@@ -1,3 +1,4 @@
+# Anime-List
 ![](static/blog/login.png)
 ![](static/blog/home.png)
 ![](static/blog/post.png)
