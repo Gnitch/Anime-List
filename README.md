@@ -7,8 +7,10 @@
 ```
 &nbsp; 3: Get a list of environments: 
 ```  conda env list ```
+<br /> 
 &nbsp; 4: To activate environment :
-``` conda activate env_name ``` <br /> 
+``` conda activate env_name ``` 
+<br /> 
 
 ![](static/blog/login.png)
 ![](static/blog/home.png)
